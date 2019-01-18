@@ -1,0 +1,27 @@
+1、认识流
+	按照数据的传输方向	输入输出流	
+	数据的表现形式：字节流（处理字节或者二进制对象），字符流（处理字符或者字符串）	
+2、16个流，有些流是成对出现
+	文件流
+		FileInputStream
+		FileOutputStream
+		FileReader
+		FileWriter
+	缓冲流
+		BufferedInputStream
+		BufferedOutputStream
+		BufferedReader
+		BufferedWriter
+	序列化流
+		ObjectInputStream
+		ObjectOutputStream
+	转换流(字节转字符)
+		InputStreamReader
+		OutputStreamWriter
+	打印流
+		PrintWriter
+		PrintStream
+	数据流
+		DataInputStream
+		DataOutputStream
+
