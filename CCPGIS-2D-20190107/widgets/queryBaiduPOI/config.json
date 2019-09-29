@@ -1,0 +1,20 @@
+{
+    "key": [
+        "5BdfbH8G0acGrG8bvauqkc6RClTe64fz",
+        "3hgY3QxOMgCTyBTUktaKX0PjdZmPFIQh",
+        "GrN0V9ehcf2F8pXPvzvsjRmgnmAYNRqt",
+        "lvsFAnTlp49TP7UaVPIszo0QLgIP5cB6",
+        "kQY606iZtGceHbiT1eBSV5cdrgLMubPz",
+        "ELixsGtZpn30pSDvCpTyhhW441r11s7Y",
+        "3lyTGoSaiEo7Tt0803bfgMSN1FW53nws",
+        "b3d3HfDObMaxViiGhmnvO8AnmFEdyysp",
+        "HcNvY8ypUA88KliQkcvbR4g40kY4kboN",
+        "petGd6dYZt4SlwZmyCa9NtPc7oVrUNgX",
+        "I7UIgnpY6jqDmQDUC0SVXzS0yBzfUMza",
+        "TtyLk3h23SwER8hla2RS1waSEXIBIK5Z",
+        "4Od4VmbeMNZ14sG8OiGqE2s4xgkaM6x9"
+    ],
+    "url": "http://api.map.baidu.com/place/v2/search",
+    "region": "全国"
+
+}

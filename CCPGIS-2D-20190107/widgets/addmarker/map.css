@@ -1,0 +1,47 @@
+/* 2017-11-3 16:54:53   */
+.addmarker-popup-titile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 3px 3px 0 0;
+    padding: 0 80px 0 20px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: white;
+    background-color: #20a0ff;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+.addmarker-popup-content {
+    width:300px;
+    margin-top: 52px;
+    font-size: 14px; 
+}
+
+.leaflet-addmarker-result {    
+    padding: 5px;
+    font-size: 14px;
+    color: #9698a0;
+    background: #ffffff;
+    font-size: 13px;
+    white-space: nowrap;
+    
+    border: 1px solid transparent;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);  
+    overflow:hidden;
+}
+
+.leaflet-addmarker-result .name {
+    font-size: 16px;
+    color: #000000;
+} 
+.leaflet-addmarker-result i { 
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+ 

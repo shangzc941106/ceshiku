@@ -1,0 +1,17 @@
+/* 2017-9-28 13:40:41   */
+
+.printBar {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 19910601;
+    height: 50px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 5px; 
+}
+.printBar input {
+    width: 130px;
+    display: inline;
+}

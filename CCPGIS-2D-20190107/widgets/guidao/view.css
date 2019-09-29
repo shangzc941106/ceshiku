@@ -1,0 +1,22 @@
+#legend{
+    background-color: rgba(170, 170, 170, 0.9);
+    height: 200px;
+    width: 180px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 9999;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.leaflet-marker-icon{
+    border: 0px;
+    background: transparent;
+}
+
+.leaflet-bottom {
+    display: none;
+}

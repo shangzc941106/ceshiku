@@ -1,0 +1,103 @@
+﻿/*地图底图切换工具*/
+.pnui-maptype { 
+	position: fixed;
+	right: 45px;
+	bottom: 0;
+	z-index: 29891015;
+	height: 80px;
+	cursor: pointer;
+	transition-property: width, background-color;
+ 	transition-duration: .4s;
+	width: 110px;
+	background-color: rgba(255, 255, 255, 0)
+}
+.pnui-mapli {
+	height: 60px;
+	width: 86px;
+	position: absolute;
+	border-radius: 2px;
+	top: 10px;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	border: 1px solid rgba(153, 153, 153, .42);
+	background: url(img/shadow.png) no-repeat 0 0;
+	background-size: 86px 240px;
+	transition-property: right, background-image;
+ 	transition-duration: .4s;
+}
+.pnui-mapli span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	padding: 0 3px 0 5px;
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+	color: #FFF;
+	border-top-left-radius: 2px;
+}
+.pnui-mapli.active span, .pnui-mapli:hover span {
+	background-color: #3385FF;
+}
+.pnui-mapnormal {
+	z-index: 1;
+	background-position: 0 0;
+	right: 20px;
+}
+.pnui-mapearth {
+	z-index: 3;
+	right: 10px;
+	border-left: 1px solid rgba(153, 153, 153, .6);
+	right: 15px;
+	z-index: 2;
+	background-position: 0 -60px;
+}
+.pnui-mappanorama {
+	z-index: 3;
+	right: 10px;
+	background-image:url(img/maptype.png);
+	background-position: 0 -121px;
+	border-left: 1px solid rgba(153, 153, 153, .6);
+}
+.pnui-maptype.expand {
+	width: 298px;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.6)
+}
+.pnui-maptype.expand .pnui-mapli {
+	border:1px solid rgba(255, 255, 255, 0);
+	background-image:url(img/maptype.png)
+}
+.pnui-mapli:hover, .pnui-maptype.expand .pnui-mapli.active {
+	border:1px solid #3385FF!important
+}
+.pnui-maptype.expand .pnui-mapnormal {
+	right:202px
+}
+.pnui-maptype.expand .pnui-mapnormal-img {  
+	background-position: 0 -61px;
+}
+
+.pnui-maptype.expand .pnui-mapearth {
+	right:106px;
+	background-image: url(img/maptype.png);
+	background-position: 0 -181px;
+}
+
+
+/*隐藏全景*/
+.maplitwo .pnui-mappanorama {
+	display: none
+}
+.maplitwo .pnui-mapearth {
+	right: 10px!important;
+	background-image: url(img/maptype.png);
+	background-position: 0 -181px
+}
+.pnui-maptype.maplitwo.expand .pnui-mapnormal {
+	right:106px
+}
+.pnui-maptype.maplitwo.expand {
+	width: 203px
+}

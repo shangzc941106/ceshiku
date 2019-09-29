@@ -1,0 +1,224 @@
+﻿/* 地图导航工具条 */
+.map_slider_toobar {
+    font-size: 1px;
+    min-width: 45px;
+    min-height: 200px;
+    position: absolute; 
+    z-index: 888;
+}
+
+.map_slider_toobar_button {
+    width: 43px;
+    height: 42px;
+    background-image: url(img/mapNav.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.map_slider_toobar_button_Nover {
+    width: 42px;
+    height: 42px;
+    background-image: url(img/mapNav.png);
+    background-position: 0px -44px;
+    background-repeat: no-repeat;
+}
+
+.map_slider_toobar_button_Sover {
+    width: 42px;
+    height: 42px;
+    background-image: url(img/mapNav.png);
+    background-position: 0px -132px;
+    background-repeat: no-repeat;
+}
+
+.map_slider_toobar_button_Wover {
+    width: 42px;
+    height: 42px;
+    background-image: url(img/mapNav.png);
+    background-position: 0px -176px;
+    background-repeat: no-repeat;
+}
+
+.map_slider_toobar_button_Eover {
+    width: 42px;
+    height: 42px;
+    background-image: url(img/mapNav.png);
+    background-position: 0px -88px;
+    background-repeat: no-repeat;
+}
+
+.map_slider_toobar_button_north {
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 10px;
+    height: 14px;
+    margin-left: 17px;
+}
+
+.map_slider_toobar_button_south {
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 10px;
+    height: 18px;
+    margin-left: 17px;
+}
+
+.map_slider_toobar_button_west {
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 14px;
+    height: 10px;
+    float: left;
+}
+
+.map_slider_toobar_button_east {
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    float: left;
+}
+
+.map_slider_toobar_button_center {
+    background-image: url();
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 13px;
+    height: 12px;
+    float: left;
+}
+
+
+.map_slider_toobar_slider {
+    width: 21px;
+    margin-top: 5px;
+    margin-left: 9px;
+    float: left;
+    display: inline;
+}
+
+.map_slider_toobar_slider_zoomIn {
+    background-image: url(img/mapNav.png);
+    background-position: 3px -220px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 26px;
+    height: 20px;
+}
+
+.map_slider_toobar_slider_zoomOut {
+    background-image: url(img/mapNav.png);
+    background-position: 3px -265px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 26px;
+    height: 20px;
+}
+
+.map_slider_toobar_slider_ticks {
+    background-image: url(img/mapNav.png);
+    background-position: -28px -233px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 7px;
+    height: 130px;
+    position: relative;
+    left: 10px;
+}
+
+.map_slider_toobar_slider_ticksSel {
+    background-image: url(img/mapNav.png);
+    background-position: -36px -233px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 7px;
+    height: 130px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.map_slider_toobar_slider_float_nonactivated {
+    background-image: url(img/mapNav.png);
+    background-position: 0px -309px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    z-index: 2001;
+    left: -6px;
+    bottom: 0px;
+}
+
+.map_slider_toobar_slider_float_activated {
+    background-image: url(img/mapNav.png);
+    background-position: 0px -320px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    z-index: 2001;
+    left: -6px;
+    bottom: 0px;
+}
+
+.map_slider_toobar_mark {
+    width: 27px;
+    margin-top: 22px;
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+.map_slider_toobar_mark:hover {
+    display: none;
+}
+
+.map_slider_toobar_mark_street {
+    position: absolute;
+    background-image: url(img/mark.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+}
+
+.map_slider_toobar_mark_city {
+    position: absolute;
+    background-image: url(img/mark.png);
+    background-position: 0px -20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+}
+
+.map_slider_toobar_mark_province {
+    position: absolute;
+    background-image: url(img/mark.png);
+    background-position: 0px -40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+}
+
+.map_slider_toobar_mark_country {
+    position: absolute;
+    background-image: url(img/mark.png);
+    background-position: 0px -60px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 27px;
+    height: 18px;
+    top: 0px;
+}

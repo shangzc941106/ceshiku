@@ -1,0 +1,374 @@
+﻿{
+    "serverURL": "http://localhost:8090/mapdata/",
+    "map": {
+        "zoom": 4,
+        "center": { "x": 108.939056, "y": 34.260622 },
+        "minZoom": 4,
+        "maxZoom": 18,
+        "centerAutoLevel": 10,
+        "copyright": false,
+        "controls": [
+            { "type": "scale" },
+            { "type": "location", "format": "<div>经度:{x}</div><div>纬度:{y}</div>" },
+            { "type": "tool", "item": [ "home", "location", "fullscreen" ], "position": "bottomright" },
+            { "type": "zoom", "position": "bottomright" },
+            { "type": "layers", "position": "bottomleft", "visible": false }
+        ],
+        "basemaps": [
+            {
+                "id": 10,
+                "name": "基础图层",
+                "type": "group"
+            },
+            {
+                "pid": 10,
+                "name": "离线电子地图",
+                "type": "tile", 
+                "url": "$serverURL$/wgs3857vec/{z}/{x}/{y}.jpg",
+                "icon": "osm.png",
+                "visible": false
+            },
+            {
+                "pid": 10,
+                "name": "离线卫星影像",
+                "type": "tile",
+                "url": "$serverURL$/wgs3857img/{z}/{x}/{y}.jpg",
+                "icon": "googleimage.png" 
+            },
+            {
+                "pid": 10,
+                "name": "天地图电子",
+                "type": "tdt_dz",
+                "layer": "vec",
+                "icon": "tianditumap.png",
+                "visible": true,
+                "key": [
+                    "313cd4b28ed520472e8b43de00b2de56",
+                    "83b36ded6b43b9bc81fbf617c40b83b5",
+                    "0ebd57f93a114d146a954da4ecae1e67",
+                    "6c99c7793f41fccc4bd595b03711913e",
+                    "56b81006f361f6406d0e940d2f89a39c"
+                ]
+            },
+            {
+                "pid": 10,
+                "name": "天地图卫星",
+                "type": "www_tdt",
+                "layer": "img",
+                "icon": "tiandituimage.png",
+                "key": [
+                    "313cd4b28ed520472e8b43de00b2de56",
+                    "83b36ded6b43b9bc81fbf617c40b83b5",
+                    "0ebd57f93a114d146a954da4ecae1e67",
+                    "6c99c7793f41fccc4bd595b03711913e",
+                    "56b81006f361f6406d0e940d2f89a39c"
+                ]
+            },
+            {
+                "pid": 10,
+                "name": "天地图地形",
+                "icon": "tianditudem.png",
+                "type": "www_tdt",
+                "layer": "ter",
+                "maxNativeZoom": 14,
+                "errorTileUrl": "img/tile/notile.png",
+                "key": [
+                    "313cd4b28ed520472e8b43de00b2de56",
+                    "83b36ded6b43b9bc81fbf617c40b83b5",
+                    "0ebd57f93a114d146a954da4ecae1e67",
+                    "6c99c7793f41fccc4bd595b03711913e",
+                    "56b81006f361f6406d0e940d2f89a39c"
+                ]
+            },
+            {
+                "pid": 10,
+                "name": "海图",
+                "icon": "advsea.png",
+                "type": "wmts",
+                "url": "http://www.ais.msa.gov.cn/MapService",
+                "layer": "default",
+                "style": "default",
+                "format": "image/png",
+                "tilematrixSet": "advsea"
+            },
+            {
+                "pid": 10,
+                "name": "OSM地图",
+                "type": "www_osm",
+                "icon": "osm.png" 
+            },
+            {
+                "pid": 10,
+                "name": "高德地图",
+                "type": "gaode_tile",
+                "layer": "vec",
+                "icon": "tianditumap.png",
+                "visible": false
+            },
+            {
+                "pid": 10,
+                "name": "高德影像",
+                "type": "gaode_yx",
+                "layer": "img",
+                "icon": "tianditumap.png"
+            },
+            {
+                "pid": 10,
+                "name": "谷歌地图",
+                "type": "google_tile",
+                "layer": "vec",
+                "icon": "tianditumap.png"
+            },
+            {
+                "pid": 10,
+                "name": "谷歌影像",
+                "type": "google_yx",
+                "layer": "img",
+                "icon": "tianditumap.png"
+            }
+
+        ],
+        "operationallayers": [
+            { "id": 20, "name": "辅助图层", "type": "group" },
+            { "pid": 20, "name": "经纬网", "type": "custom_jww" },
+            { "pid": 20, "name": "实时路况", "type": "www_gaode", "layer": "time" },
+
+            {
+                "id": 40,
+                "name": "栅格数据",
+                "type": "group"
+            },
+            {
+                "id": 4020,
+                "pid": 40,
+                "name": "OGC WMS数据",
+                "type": "group"
+            },
+            {
+                "pid": 4020,
+                "name": "行政边界线",
+                "type": "wms",
+                "url": "http://gisserver.tianditu.com/TDTService/region/wms",
+                "layers": "030100",
+                "transparent": true,
+                "format": "image/png"
+            },
+            {
+                "pid": 4020,
+                "name": "全国边界线",
+                "type": "wms",
+                "url": "http://localhost:8091/geoserver/test/wms",
+                "layers": "test:sheng",
+                "transparent": true,
+                "format": "image/png",
+                "popup": "all"
+            },
+    
+            {
+                "id": 4010,
+                "pid": 40,
+                "name": "ArcGIS Dynamic",
+                "type": "group"
+            },
+            {
+                "pid": 4010,
+                "name": "县界",
+                "type": "arcgis_dynamic",
+                "url": "http://localhost:6080/arcgis/rest/services/CountyTest/MapServer",
+                "layers": [ 0 ],
+                "popup": "all"
+            },
+            {
+                "pid": 4010,
+                "name": "丰台区建筑物",
+                "type": "arcgis_dynamic",
+                "url": "http://localhost:6080/arcgis/rest/services/fengtaibuilding/MapServer",
+                "opacity": 0.5,
+                "layers": [ 0 ],
+                "popup": "all"
+            },
+            {
+                "id": 30,
+                "name": "矢量数据",
+                "type": "group"
+            },
+            {
+                "id": 3030,
+                "pid": 30,
+                "name": "GeoJSON数据",
+                "type": "group"
+            },
+            {
+                "pid": 3030,
+                "name": "各省市",
+                "type": "geojson",
+                "url": "../leaflet-example/data/china.json",
+                "symbol": {
+                    "styleOptions": {
+                        "color": "#0000ff",
+                        "opacity": 1,
+                        "dashArray": "5 10",
+                        "weight": 2,
+                        "fillColor": "#000",
+                        "fillOpacity": 0.2
+                    }
+                },
+                "popup": "all"
+            },
+
+            {
+                "id": 3010,
+                "pid": 30,
+                "name": "ArcGIS Feature",
+                "type": "group"
+            }
+        ]
+    },
+
+    "widget": {
+        "debugger": false,
+        "version": "time",
+        "defaultOptions": {
+            "windowOptions": {
+                "skin": "animation-fade",
+                "position": {
+                    "top": 50,
+                    "right": 10
+                },
+                "maxmin": false,
+                "resize": true
+            },
+            "autoDisable": true,
+            "disableOther": true
+        },
+        "widgetsAtStart": [
+            {
+                "name": "轨道交通",
+                "uri": "widgets/guidao/widget.js"
+            }
+        ],
+        "widgets": [
+            {
+                "name": "模板",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "iframe弹窗模板",
+                        "uri": "widgets/_example/widget.js",
+                        "windowOptions": {
+                            "width": 300,
+                            "height": 400,
+                            "position": {
+                                "bottom": 50,
+                                "right": 10
+                            },
+                            "maxmin": true,
+                            "resize": true
+                        },
+                        "openAtStart": false
+                    },
+                    {
+                        "name": "div弹窗模板",
+                        "uri": "widgets/_example_divwin/widget.js"
+                    },
+                    {
+                        "name": "append模板",
+                        "uri": "widgets/_example_append/widget.js"
+                    }
+                ]
+            },
+            {
+                "name": "地图工具",
+                "type": "group",
+                "children": [
+                    {
+                        "id": "manageBasemaps",
+                        "name": "地图切换",
+                        "uri": "widgets/manageBasemaps/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "left": 50,
+                                "bottom": 25
+                            }
+                        },
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "图层控制",
+                        "basemaps": true,
+                        "uri": "widgets/manageLayers/widget.js",
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "坐标定位",
+                        "uri": "widgets/centerXY/widget.js"
+                    },
+                    {
+                        "name": "地区导航",
+                        "uri": "widgets/navXZQH/widget.js"
+                    },
+                    {
+                        "name": "测量",
+                        "uri": "widgets/measure/widget.js"
+                    },
+                    {
+                        "name": "标记",
+                        "uri": "widgets/addmarker/widget.js"
+                    },
+                    {
+                        "name": "视角书签",
+                        "uri": "widgets/bookmark/widget.js"
+                    },
+                    {
+                        "name": "分屏对比",
+                        "uri": "widgets/mapCompare/widget.js",
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "卷帘对比",
+                        "uri": "widgets/mapSwipe/widget.js",
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "标绘",
+                        "uri": "widgets/plot/widget.js",
+                        "windowOptions": {
+                            "position": {
+                                "top": 50,
+                                "right": 10,
+                                "bottom": 10
+                            }
+                        }
+                    },
+                    {
+                        "name": "分享当前地图位置",
+                        "uri": "widgets/shareUrl/widget.js",
+                        "windowOptions": {
+                            "position": "t"
+                        }
+                    },
+                    {
+                        "name": "打印",
+                        "uri": "widgets/print/widget.js",
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "导出地图",
+                        "uri": "widgets/expImg/widget.js",
+                        "autoDisable": false,
+                        "disableOther": false
+                    },
+                    {
+                        "name": "街景",
+                        "uri": "widgets/streetscape/widget.js"
+                    }
+                ]
+            }
+        ]
+    }
+}
